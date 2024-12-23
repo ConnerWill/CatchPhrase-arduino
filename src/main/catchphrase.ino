@@ -97,7 +97,7 @@ const char* const wordsShows[] PROGMEM = {
     "BreakingBad", "Narcos", "Westworld", "GOT", "Castle", "Office", "PeakyBlinders", "Vikings", "TheCrown", "Fargo",
     "TheWalkingDead", "BlackMirror", "BetterCallSaul", "TheOfficeUS", "HowIMetYourMother", "TheExpanse", "Sherlock",
     "Chernobyl", "MoneyHeist", "Mindhunter", "TheWitcher", "StrangerThings", "TheHandmaidsTale", "TrueDetective", 
-    "TheSopranos", "HouseOfCards", "NarcosMexico", "Arrow", "TheFlash", "Supernatural", "Lucifer", "OrangeIsTheNewBlack",
+    "The Sopranos", "House Of Cards", "Narcos", "Arrow", "TheFlash", "Supernatural", "Lucifer", "OrangeIsTheNewBlack",
     "TheBoys", "Ozark", "ThePunisher", "BrooklynNineNine", "Community", "RickAndMorty", "MarvelsDaredevil", 
     "TheGoodPlace", "TheUmbrellaAcademy", "BoJackHorseman", "JackRyan", "CastleRock", "TheNightManager", "13ReasonsWhy", 
     "Hannibal", "BetterThings", "FridayNightLights", "GilmoreGirls", "NewGirl", "LostInSpace", "TheMarvelousMrsMaisel",
@@ -105,7 +105,7 @@ const char* const wordsShows[] PROGMEM = {
     "UnbreakableKimmySchmidt", "TheFosters", "TheMandalorian", "Broadchurch", "StrangerThings2", "Hannibal", "TheBlacklist",
     "TheGoodDoctor", "TheChernobylChronicles", "TheRightStuff", "SiliconValley", "WestWing", "TheStrain", 
     "RaisingDion", "Euphoria", "TheCloneWars", "BigLittleLies", "ThePacific", "Superstore", "TheNightOf", 
-    "QueenOfTheSouth", "TedLasso", "AfterLife", "KillingEve", "PennyDreadful", "NarcosColombia", "TheFall", "BetterCallSaul", 
+    "QueenOfTheSouth", "TedLasso", "AfterLife", "KillingEve", "PennyDreadful", "TheFall", "BetterCallSaul", 
     "ThisIsUs", "TheLeftovers", "TheO.C.", "TheLyingGame", "Shameless", "Supernatural", "TheXFiles", "TheLastOfUs"
 };
 
