@@ -53,6 +53,19 @@ void playCountdownSound() {
   delay(100);                  // Short delay to separate tones
 }
 
+void playRoundEndSound() {
+  tone(speakerPin, 500, 500); // Play a 500Hz tone for 500ms when the round ends
+}
+
+void playWinnerSound() {
+  for (int i = 0; i < 3; i++) {
+    tone(speakerPin, 1000, 200); // First tone (1000 Hz)
+    delay(300);                  // Short delay between tones
+    tone(speakerPin, 1500, 200); // Second tone (1500 Hz)
+    delay(300);                  // Short delay between tones
+  }
+}
+
 // Display functions
 void displayScores() {
   lcd.clear();            // Clear the LCD screen
@@ -101,8 +114,9 @@ void handleButtons() {
       delay(200); // Debounce the button press
       team1Score++; // Increment Team 1 score
       if (team1Score >= winningScore) {
-        displayWinner(1); // Display Team 1 as the winner
-        resetGame(true); // Reset game but don't reset scores
+        playWinnerSound(); // Play winner sound for Team 1
+        displayWinner(1);  // Display Team 1 as the winner
+        resetGame(true);   // Reset game
       } else {
         displayScores(); // Update the display
       }
@@ -112,13 +126,14 @@ void handleButtons() {
       delay(200); // Debounce the button press
       team2Score++; // Increment Team 2 score
       if (team2Score >= winningScore) {
-        displayWinner(2); // Display Team 2 as the winner
-        resetGame(true); // Reset game but don't reset scores
+        playWinnerSound(); // Play winner sound for Team 2
+        displayWinner(2);  // Display Team 2 as the winner
+        resetGame(true);   // Reset game
       } else {
         displayScores(); // Update the display
       }
     }
-    
+
     // Countdown timer logic
     if (timer > 0) {
       delay(1000); // Wait for 1 second
@@ -128,6 +143,7 @@ void handleButtons() {
     } else {
       // Timer expired, end round
       gameActive = false; // Deactivate the game
+      playRoundEndSound(); // Play sound when round ends
       lcd.clear(); // Clear the screen
       lcd.print("Round Over!"); // Display round over message
       delay(2000); // Wait for 2 seconds
