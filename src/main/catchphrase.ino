@@ -72,24 +72,24 @@ void playWinnerSound() {
 
 // Display functions
 void displayScores() {
-  lcd.clear();            // Clear the LCD screen
-  lcd.setCursor(0, 0);    // Move to the first line
-  lcd.print("T1:");       // Display Team 1 label
-  lcd.print(team1Score);  // Display Team 1 score
-  lcd.print(" T2:");      // Display Team 2 label
-  lcd.print(team2Score);  // Display Team 2 score
-  lcd.setCursor(0, 1);    // Move to the second line
-  lcd.print(currentWord); // Display the current word
-  lcd.print(" Time: ");   // Display timer label
-  lcd.print(timer);       // Display remaining time
+  lcd.clear();             // Clear the LCD screen
+  lcd.setCursor(0, 0);     // Move to the first line
+  lcd.print(F("T1:"));     // Display Team 1 label
+  lcd.print(team1Score);   // Display Team 1 score
+  lcd.print(F(" T2:"));    // Display Team 2 label
+  lcd.print(team2Score);   // Display Team 2 score
+  lcd.setCursor(0, 1);     // Move to the second line
+  lcd.print(currentWord);  // Display the current word
+  lcd.print(F(" Time: ")); // Display timer label
+  lcd.print(timer);        // Display remaining time
 }
 
 void displayWinner(int team) {
-  lcd.clear();         // Clear the LCD screen
-  lcd.setCursor(0, 0); // Move to the first line
-  lcd.print("Team ");  // Display "Team "
-  lcd.print(team);     // Display the winning team number
-  lcd.print(" Wins!"); // Display " Wins!"
+  lcd.clear();            // Clear the LCD screen
+  lcd.setCursor(0, 0);    // Move to the first line
+  lcd.print(F("Team "));  // Display "Team "
+  lcd.print(team);        // Display the winning team number
+  lcd.print(F(" Wins!")); // Display " Wins!"
 }
 
 // Button handling
@@ -103,7 +103,7 @@ void handleButtons() {
       timer = roundTime; // Reset timer
     } else {
       lcd.clear(); // Clear the LCD
-      lcd.print("Game Paused"); // Indicate the game is paused
+      lcd.print(F("Game Paused")); // Indicate the game is paused
     }
   }
 
@@ -149,7 +149,7 @@ void handleButtons() {
       gameActive = false; // Deactivate the game
       playRoundEndSound(); // Play sound when round ends
       lcd.clear(); // Clear the screen
-      lcd.print("Round Over!"); // Display round over message
+      lcd.print(F("Round Over!")); // Display round over message
       delay(2000); // Wait for 2 seconds
       // Don't reset scores, just set gameActive to false and prepare for the next round
     }
@@ -180,9 +180,9 @@ void setup() {
   randomSeed(analogRead(A0)); // Use analog pin for random seed
 
   // Welcome message
-  lcd.print("CATCHPHRASE!");  // Display "CATCHPHRASE!" message
-  delay(2000);                // Wait for 2 seconds
-  lcd.clear();                // Clear the LCD screen
+  lcd.print(F("CATCHPHRASE!"));  // Display "CATCHPHRASE!" message
+  delay(2000);                   // Wait for 2 seconds
+  lcd.clear();                   // Clear the LCD screen
 }
 
 void loop() {
