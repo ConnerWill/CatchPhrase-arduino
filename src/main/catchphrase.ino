@@ -24,28 +24,76 @@ const int roundTime = 30; // Round duration in seconds
 int timer = roundTime;    // Initialize timer with round time
 
 // Categories and words (PROGMEM to save memory)
-const char category1[] PROGMEM = "Animals"; // Category name: Animals
-const char category2[] PROGMEM = "Movies";  // Category name: Movies
-const char category3[] PROGMEM = "Shows";  // Category name: Movies
-const char category4[] PROGMEM = "Food";    // Category name: Food
-const char category5[] PROGMEM = "Conner";  // Category name: Food
-const char *const categories[] PROGMEM = {category1, category2, category3, category4, category5}; // List of all categories
+const char category1[] PROGMEM  = "Animals";
+const char category2[] PROGMEM  = "Movies";
+const char category3[] PROGMEM  = "Shows";
+const char category4[] PROGMEM  = "Food";
+const char category5[] PROGMEM  = "Conner";
+const char category6[] PROGMEM  = "Sports";
+const char category7[] PROGMEM  = "Music";
+const char category8[] PROGMEM  = "Famous People";
+const char category9[] PROGMEM  = "Places";
+const char category10[] PROGMEM = "Every Day Life";
+const char category11[] PROGMEM = "Phrases";
+const char category12[] PROGMEM = "Technology";
+const char category13[] PROGMEM = "Historical Events";
+const char category14[] PROGMEM = "Vehicles";
+const char category15[] PROGMEM = "Mythology";
+const char category16[] PROGMEM = "Nature";
+const char category17[] PROGMEM = "Space";
 
-const char *const wordsAnimals[] PROGMEM = {"Lion", "Elephant", "Tiger", "Bear", "Giraffe"};       // Words in Animals category
-const char *const wordsMovies[] PROGMEM = {"Inception", "Titanic", "Avatar", "Jaws", "Gladiator"}; // Words in Movies category
-const char *const wordsShows[] PROGMEM = {"Seinfeld", "The Office", "Lost", "Game of Thrones", "Friends"}; // Words in Shows category
-const char *const wordsFood[] PROGMEM = {"Pizza", "Burger", "Sushi", "Pasta", "Salad"};            // Words in Food category
-const char *const wordsConner[] PROGMEM = {"Conner", "Lucas", "Sarah", "Ethan", "Will"};           // Words in Conner category
+// Update categories and word lists array
+const char *const categories[] PROGMEM = {
+  category1, category2, category3, category4, category5,
+  category6, category7, category8, category9, category10,
+  category11, category12, category13, category14, category15,
+  category16, category17
+};
 
-const char **const wordLists[] PROGMEM = {wordsAnimals, wordsMovies, wordsShows, wordsFood, wordsConner}; // List of all word arrays
+const char *const wordsAnimals[] PROGMEM = {"Lion", "Elephant", "Tiger", "Bear", "Giraffe"};
+const char *const wordsMovies[] PROGMEM = {"Inception", "Titanic", "Avatar", "Jaws", "Gladiator"};
+const char *const wordsShows[] PROGMEM = {"Seinfeld", "The Office", "Lost", "Game of Thrones", "Friends"};
+const char *const wordsFood[] PROGMEM = {"Pizza", "Burger", "Sushi", "Pasta", "Salad"};
+const char *const wordsConner[] PROGMEM = {"Conner", "Lucas", "Sarah", "Ethan", "Will"};
+const char *const wordsSports[] PROGMEM = {"Soccer", "Basketball", "Tennis", "Football", "Baseball"};
+const char *const wordsMusic[] PROGMEM = {"Guitar", "Piano", "Drums", "Rock", "Jazz"};
+const char *const wordsFamousPeople[] PROGMEM = {"Einstein", "Shakespeare", "Tesla", "Obama", "Gandhi"};
+const char *const wordsPlaces[] PROGMEM = {"Paris", "New York", "Tokyo", "London", "Sydney"};
+const char *const wordsEveryDayLife[] PROGMEM = {"Laundry", "Groceries", "Coffee", "Shower", "Work"};
+const char *const wordsPhrases[] PROGMEM = {"Break a leg", "Under the weather", "Piece of cake", "Once in a blue moon", "Caught red-handed"};
+const char *const wordsTechnology[] PROGMEM = {"Computer", "Smartphone", "Internet", "Laptop", "Software"};
+const char *const wordsHistoricalEvents[] PROGMEM = {"World War II", "Moon Landing", "French Revolution", "Civil War", "Renaissance"};
+const char *const wordsVehicles[] PROGMEM = {"Car", "Truck", "Bicycle", "Motorcycle", "Helicopter"};
+const char *const wordsMythology[] PROGMEM = {"Zeus", "Hercules", "Medusa", "Poseidon", "Apollo"};
+const char *const wordsNature[] PROGMEM = {"Mountain", "River", "Forest", "Desert", "Ocean"};
+const char *const wordsSpace[] PROGMEM = {"Planet", "Galaxy", "Astronaut", "Rocket", "Moon"};
+
+const char **const wordLists[] PROGMEM = {
+  wordsAnimals, wordsMovies, wordsShows, wordsFood, wordsConner,
+  wordsSports, wordsMusic, wordsFamousPeople, wordsPlaces, wordsInstruments,
+  wordsSuperheroes, wordsTechnology, wordsHistoricalEvents, wordsVehicles, wordsMythology,
+  wordsNature, wordsSpace
+};
 
 // Calculate number of words in each category
 const int wordCounts[] = {
-  sizeof(wordsAnimals) / sizeof(wordsAnimals[0]),
-  sizeof(wordsMovies)  / sizeof(wordsMovies[0]),
-  sizeof(wordsShows)   / sizeof(wordsShows[0]),
-  sizeof(wordsFood)    / sizeof(wordsFood[0]),
-  sizeof(wordsConner)  / sizeof(wordsConner[0])
+  sizeof(wordsAnimals)          / sizeof(wordsAnimals[0]),
+  sizeof(wordsMovies)           / sizeof(wordsMovies[0]),
+  sizeof(wordsShows)            / sizeof(wordsShows[0]),
+  sizeof(wordsFood)             / sizeof(wordsFood[0]),
+  sizeof(wordsConner)           / sizeof(wordsConner[0]),
+  sizeof(wordsSports)           / sizeof(wordsSports[0]),
+  sizeof(wordsMusic)            / sizeof(wordsMusic[0]),
+  sizeof(wordsFamousPeople)     / sizeof(wordsFamousPeople[0]),
+  sizeof(wordsPlaces)           / sizeof(wordsPlaces[0]),
+  sizeof(wordsEveryDayLife)     / sizeof(wordsEveryDayLife[0]),
+  sizeof(wordsPhrases)          / sizeof(wordsPhrases[0]),
+  sizeof(wordsTechnology)       / sizeof(wordsTechnology[0]),
+  sizeof(wordsHistoricalEvents) / sizeof(wordsHistoricalEvents[0]),
+  sizeof(wordsVehicles)         / sizeof(wordsVehicles[0]),
+  sizeof(wordsMythology)        / sizeof(wordsMythology[0]),
+  sizeof(wordsNature)           / sizeof(wordsNature[0]),
+  sizeof(wordsSpace)            / sizeof(wordsSpace[0]),
 };
 
 // Helper function to get a random word from a category
