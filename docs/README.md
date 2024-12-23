@@ -58,6 +58,12 @@ This project implements the popular party game CatchPhrase on an Arduino microco
 3. **Power the Arduino**:
    - Use a USB cable or external power supply to power the Arduino.
 
+### Schematics
+
+![Schematics](../schematics/schematics.png)
+
+*Schematics file can be found in the [`schematics`](../schematics) directory.*
+
 ## How to Play
 
 1. Power on the Arduino. The LCD will display a welcome message and available categories.
@@ -82,4 +88,4 @@ This project implements the popular party game CatchPhrase on an Arduino microco
 
 - Ensure all components are properly connected and the buttons are debounced for reliable input.
 - Use a compatible LCD size and adjust the code if required.
-- Use PROGMEM for efficient memory usage on the Arduino.
+- Use `PROGMEM` for efficient memory usage on the Arduino.
