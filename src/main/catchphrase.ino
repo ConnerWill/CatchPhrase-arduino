@@ -50,23 +50,146 @@ const char *const categories[] PROGMEM = {
   category16, category17
 };
 
-const char *const wordsAnimals[] PROGMEM = {"Lion", "Elephant", "Tiger", "Bear", "Giraffe"};
-const char *const wordsMovies[] PROGMEM = {"Inception", "Titanic", "Avatar", "Jaws", "Gladiator"};
-const char *const wordsShows[] PROGMEM = {"Seinfeld", "The Office", "Lost", "Game of Thrones", "Friends"};
-const char *const wordsFood[] PROGMEM = {"Pizza", "Burger", "Sushi", "Pasta", "Salad"};
-const char *const wordsConner[] PROGMEM = {"Conner", "Lucas", "Sarah", "Ethan", "Will"};
-const char *const wordsSports[] PROGMEM = {"Soccer", "Basketball", "Tennis", "Football", "Baseball"};
-const char *const wordsMusic[] PROGMEM = {"Guitar", "Piano", "Drums", "Rock", "Jazz"};
-const char *const wordsFamousPeople[] PROGMEM = {"Einstein", "Shakespeare", "Tesla", "Obama", "Gandhi"};
-const char *const wordsPlaces[] PROGMEM = {"Paris", "New York", "Tokyo", "London", "Sydney"};
-const char *const wordsEveryDayLife[] PROGMEM = {"Laundry", "Groceries", "Coffee", "Shower", "Work"};
-const char *const wordsPhrases[] PROGMEM = {"Break a leg", "Under the weather", "Piece of cake", "Once in a blue moon", "Caught red-handed"};
-const char *const wordsTechnology[] PROGMEM = {"Computer", "Smartphone", "Internet", "Laptop", "Software"};
-const char *const wordsHistoricalEvents[] PROGMEM = {"World War II", "Moon Landing", "French Revolution", "Civil War", "Renaissance"};
-const char *const wordsVehicles[] PROGMEM = {"Car", "Truck", "Bicycle", "Motorcycle", "Helicopter"};
-const char *const wordsMythology[] PROGMEM = {"Zeus", "Hercules", "Medusa", "Poseidon", "Apollo"};
-const char *const wordsNature[] PROGMEM = {"Mountain", "River", "Forest", "Desert", "Ocean"};
-const char *const wordsSpace[] PROGMEM = {"Planet", "Galaxy", "Astronaut", "Rocket", "Moon"};
+const char* const wordsAnimals[] PROGMEM = {
+    "Lion", "Elephant", "Tiger", "Bear", "Giraffe", "Zebra", "Kangaroo", "Shark", "Whale", "Rabbit",
+    "Penguin", "Koala", "Dolphin", "Otter", "Cheetah", "Buffalo", "Rhino", "Panda", "Jaguar", "Lynx",
+    "Wolf", "Fox", "Coyote", "Leopard", "Lemur", "Baboon", "Chimpanzee", "Gorilla", "Orangutan", 
+    "Sloth", "Hyena", "Meerkat", "TasmanianDevil", "Wolverine", "Badger", "Raccoon", "Squirrel", 
+    "Bison", "Moose", "Caribou", "Anteater", "Porcupine", "Armadillo", "Capybara", "Otterhound", 
+    "Marmot", "Weasel", "Mink", "Opossum", "Eagle", "Falcon", "Hawk", "Vulture", "Condor", "Parrot", 
+    "Toucan", "Crow", "Raven", "Swan", "Heron", "Pelican", "Albatross", "Seagull", "Goose", "Pigeon", 
+    "Peacock", "Flamingo", "Penguin", "Hummingbird", "Woodpecker", "Bat", "Dragonfly", "Moth", "Butterfly", 
+    "Bee", "Ant", "Termite", "Ladybug", "Grasshopper", "Cricket", "Beetle", "Cockroach", "Caterpillar", 
+    "Worm", "Earthworm", "Leech", "Snail", "Slug", "Scorpion", "Centipede", "Millipede", "Starfish", 
+    "Octopus", "Squid", "Jellyfish", "Clam", "Mussel", "Shrimp", "Lobster", "Crab", "Oyster", "Cuttlefish", 
+    "Ray", "Turtle", "Crocodile", "Alligator", "Iguana", "Chameleon", "Gecko", "Anole", "MonitorLizard", 
+    "Viper", "Python", "Boa", "Rattlesnake", "KingSnake", "CoralSnake", "Adder", "GilaMonster", 
+    "KomodoDragon", "Mongoose", "Camel", "Donkey", "Horse", "Sheep", "Goat", "Pig", "Cow", "Chicken", 
+    "Duck", "Turkey", "Goose", "Peafowl", "Emu", "Ostrich", "Alpaca", "Llama", "Bison", "Yak", "Reindeer", 
+    "Elk", "Gazelle", "Impala", "Springbok", "Antelope", "Ibex", "Kudu", "Eland", "Bongo", "Wildebeest", 
+    "Okapi", "KangarooRat", "Wallaby", "Quokka", "Bandicoot", "SugarGlider", "Numbat", "KoalaBear", 
+    "TasmanianTiger", "Fossa", "Pangolin", "Marmot", "Platypus", "Wombat", "Tarantula", "Cicada", 
+    "Lynx", "Caracal", "Serval", "Cougar", "MountainLion", "WildCat", "Jaguarundi", "JaguarX", "Puma"
+};
+
+const char* const wordsMovies[] PROGMEM = {
+    "Inception", "Titanic", "Avatar", "Jaws", "Gladiator", "Interstellar", "Matrix", "Batman", "Rocky", "Jumanji",
+    "StarWars", "ToyStory", "Frozen", "Up", "TheShining", "Memento", "Goodfellas", "Casablanca", "Shrek", "Alien",
+    "TheGodfather", "PulpFiction", "TheDarkKnight", "FightClub", "ForrestGump", "TheMatrix", "JurassicPark", 
+    "TheAvengers", "TheLionKing", "SchindlersList", "TheTerminator", "TheWizardOfOz", "GoneWithTheWind", 
+    "StarTrek", "TheSocialNetwork", "TheShawshankRedemption", "BladeRunner", "TheSilenceOfTheLambs", "12AngryMen", 
+    "DieHard", "BackToTheFuture", "Casablanca", "ThePrincessBride", "TheHungerGames", "MadMax", "PulpFiction", 
+    "E.T.", "TheNotebook", "RockyHorror", "Léon", "LaLaLand", "AClockworkOrange", "TheExorcist", "TheBigLebowski", 
+    "TheGoonies", "IngloriousBasterds", "TheGreatEscape", "TheUsualSuspects", "DrStrangelove", "Gladiator", 
+    "TheSoundOfMusic", "GoodMorningVietnam", "TheGreatestShowman", "SpiderMan", "IndianaJones", "PiratesOfTheCaribbean", 
+    "TheHobbit", "ToyStory2", "TheGiver", "FindingNemo", "WALL-E", "Zootopia", "Interstellar", "DjangoUnchained", 
+    "Moonlight", "Her", "TheDarkKnightRises", "GuardiansOfTheGalaxy", "JurassicWorld", "AvengersEndgame", 
+    "TheIncredibles", "BlackPanther", "IronMan", "CaptainAmerica", "Thor", "Deadpool", "MadMaxFuryRoad", 
+    "Gladiator", "ShutterIsland", "TheDeparted", "TheHungerGames", "PacificRim", "TheMartian", "TheRevenant", 
+    "ThePrincessDiaries", "AStarIsBorn", "Frozen2", "It", "LaLaLand", "KnivesOut", "Shazam", "JumanjiTheNextLevel",
+    "DoctorStrange", "GuardiansOfTheGalaxyVol2", "BladeRunner2049", "WonderWoman", "Logan", "FantasticBeasts", 
+    "Kingsman", "Ghostbusters", "TheBigShort", "FuryRoad", "Parasite", "TheWolfOfWallStreet", "TheMatrixReloaded", 
+    "IronMan2", "Coco", "Frozen", "AvatarTheWayOfWater", "Tenet", "TheIrrationalMan", "TheKiller", "ABeautifulMind"
+};
+
+const char* const wordsShows[] PROGMEM = {
+    "Seinfeld", "Friends", "Lost", "Stranger", "Simpsons", "Scrubs", "Dexter", "Mandalorian", "Suits", "BigBang",
+    "BreakingBad", "Narcos", "Westworld", "GOT", "Castle", "Office", "PeakyBlinders", "Vikings", "TheCrown", "Fargo",
+    "TheWalkingDead", "BlackMirror", "BetterCallSaul", "TheOfficeUS", "HowIMetYourMother", "TheExpanse", "Sherlock",
+    "Chernobyl", "MoneyHeist", "Mindhunter", "TheWitcher", "StrangerThings", "TheHandmaidsTale", "TrueDetective", 
+    "TheSopranos", "HouseOfCards", "NarcosMexico", "Arrow", "TheFlash", "Supernatural", "Lucifer", "OrangeIsTheNewBlack",
+    "TheBoys", "Ozark", "ThePunisher", "BrooklynNineNine", "Community", "RickAndMorty", "MarvelsDaredevil", 
+    "TheGoodPlace", "TheUmbrellaAcademy", "BoJackHorseman", "JackRyan", "CastleRock", "TheNightManager", "13ReasonsWhy", 
+    "Hannibal", "BetterThings", "FridayNightLights", "GilmoreGirls", "NewGirl", "LostInSpace", "TheMarvelousMrsMaisel",
+    "TheFlash", "Supergirl", "Fleabag", "Narcos", "DoctorWho", "AHS", "LovecraftCountry", "TheChillingAdventuresOfSabrina",
+    "UnbreakableKimmySchmidt", "TheFosters", "TheMandalorian", "Broadchurch", "StrangerThings2", "Hannibal", "TheBlacklist",
+    "TheGoodDoctor", "TheChernobylChronicles", "TheRightStuff", "SiliconValley", "WestWing", "TheStrain", 
+    "RaisingDion", "Euphoria", "TheCloneWars", "BigLittleLies", "ThePacific", "Superstore", "TheNightOf", 
+    "QueenOfTheSouth", "TedLasso", "AfterLife", "KillingEve", "PennyDreadful", "NarcosColombia", "TheFall", "BetterCallSaul", 
+    "ThisIsUs", "TheLeftovers", "TheO.C.", "TheLyingGame", "Shameless", "Supernatural", "TheXFiles", "TheLastOfUs"
+};
+
+const char* const wordsFood[] PROGMEM = {
+    "Pizza", "Burger", "Sushi", "Pasta", "Salad", "Tacos", "Burritos", "Steak", "Pancakes", "IceCream",
+    "SushiRoll", "Curry", "Risotto", "Noodles", "Chicken", "Stew", "Lasagna", "Waffles", "FriedRice", "Fajitas",
+    "HotDog", "Ramen", "Spaghetti", "GrilledCheese", "Poutine", "Gyro", "Falafel", "Sandwich", "Kebab", "Moussaka",
+    "DimSum", "Paella", "Quiche", "Tiramisu", "Cheesecake", "Muffin", "Brownie", "Croissant", "Bagel", "Ceviche",
+    "Clams", "Oysters", "Churros", "Samosa", "PorkBelly", "Shawarma", "BanhMi", "Goulash", "Chili", "CobbSalad",
+    "Casserole", "PotPie", "Pho", "SpringRolls", "Kimchi", "ZucchiniFritters", "Focaccia", "Scones", "CheeseCurds",
+    "Churro", "LobsterRoll", "PastaSalad", "BakedPotato", "Nachos", "SalisburySteak", "CabbageRolls", "Tempura", 
+    "Frittata", "Gumbo", "BangersAndMash", "RisottoBalls", "BeefStew", "SteakFrites", "Tempura", "PekingDuck",
+    "FriedChicken", "DuckBreast", "Crepes", "Baklava", "PizzaRolls", "Ravioli", "Tamales", "Empanadas", "PulledPork",
+    "CurryWurst", "TunaMelt", "Gravy", "Bangers", "Meatballs", "FriedEgg", "Popcorn", "CinnamonRoll", "EggRolls", 
+    "ChiliConCarne", "TofuStirFry", "BBQRibs", "CinnamonToast", "PastaCarbonara", "BakedZiti", "ChickenWings", "Risotto"
+};
+
+
+const char* const wordsConner[] PROGMEM = {
+    "Conner", "Lucas", "Sarah", "Ethan", "Will", "Olivia", "Jackson", "Sophia", "Madison", "Noah", 
+    "Ava", "Isabella", "Mason", "Liam", "Ella", "Grace", "James", "Zoe", "Mia", "Benjamin"
+};
+
+const char* const wordsSports[] PROGMEM = {
+    "Soccer", "Basketball", "Tennis", "Football", "Baseball", "Cricket", "Rugby", "Golf", "Boxing", "Hockey",
+    "Lacrosse", "Swimming", "Volleyball", "Cycling", "Skiing", "Formula1", "Badminton", "Rowing", "Wrestling", "Gymnastics"
+};
+
+const char* const wordsMusic[] PROGMEM = {
+    "Guitar", "Piano", "Drums", "Rock", "Jazz", "Pop", "Classical", "Blues", "HipHop", "Reggae", 
+    "Violin", "Flute", "Saxophone", "Cello", "Bass", "Trumpet", "Opera", "EDM", "Country", "Folk"
+};
+
+const char* const wordsFamousPeople[] PROGMEM = {
+    "Einstein", "Shakespeare", "Tesla", "Obama", "Gandhi", "Newton", "Lincoln", "Curie", "Churchill", "Mandela", 
+    "Einstein", "Bach", "DaVinci", "Napoleon", "Churchill", "Cervantes", "MarieCurie", "Franklin", "Wright", "Mandela"
+};
+
+const char* const wordsPlaces[] PROGMEM = {
+    "Paris", "London", "Tokyo", "Sydney", "Rome", "Berlin", "Moscow", "Dubai", "Miami", "Lagos", 
+    "Cairo", "Athens", "Istanbul", "Barcelona", "Berlin", "Madrid", "Beijing", "NewYork", "LosAngeles", "Bangkok"
+};
+
+const char* const wordsEveryDayLife[] PROGMEM = {
+    "Laundry", "Coffee", "Work", "Exercise", "Sleep", "Travel", "Cleaning", "Cooking", "Dishes", "Shopping", 
+    "Reading", "Walking", "Writing", "Bathing", "Relaxing", "Brushing", "Eating", "Studying", "Running", "Sleeping"
+};
+
+const char* const wordsPhrases[] PROGMEM = {
+    "Break a leg", "Piece of cake", "Under the weather", "Once in a blue moon", "Bite the bullet", "Hit the sack", 
+    "Spill the beans", "Let the cat out", "Cut to the chase", "Burning the midnight oil", "Jump the gun", 
+    "On cloud nine", "Call it a day", "Hit the nail", "Off the hook", "On the ball", "Behind the scenes", 
+    "In the same boat", "The ball is in your court", "Under your nose"
+};
+
+const char* const wordsTechnology[] PROGMEM = {
+    "Computer", "Laptop", "Smartphone", "Cloud", "Blockchain", "AI", "Software", "Robots", "VR", "AR", 
+    "Internet", "Data", "Website", "App", "Database", "Server", "Firewall", "Security", "Bluetooth", "IoT"
+};
+
+const char* const wordsHistoricalEvents[] PROGMEM = {
+    "WWII", "Moon Landing", "Renaissance", "Cold War", "Civil War", "Revolution", "American Rev", "Berlin Wall", "9/11", 
+    "Titanic", "French Rev", "Hiroshima", "Vikings", "Crusades", "GreatDepression", "Fall of Berlin", "Apollo11", "Gandhi", "WWI"
+};
+
+const char* const wordsVehicles[] PROGMEM = {
+    "Car", "Truck", "Bicycle", "Motorcycle", "Helicopter", "Bus", "Train", "Plane", "Boat", "Submarine", 
+    "Ship", "Jet", "Rocket", "Scooter", "Tank", "Tractor", "Ambulance", "Taxi", "Tram", "Van"
+};
+
+const char* const wordsMythology[] PROGMEM = {
+    "Zeus", "Hercules", "Medusa", "Apollo", "Thor", "Athena", "Poseidon", "Hades", "Ares", "Persephone", 
+    "Ra", "Osiris", "Bastet", "Anubis", "Hermes", "Freya", "Odin", "Loki", "Boreas", "Prometheus"
+};
+
+const char* const wordsNature[] PROGMEM = {
+    "Mountain", "River", "Forest", "Desert", "Ocean", "Lake", "Cliff", "Waterfall", "Valley", "Cave", 
+    "Tundra", "Marsh", "Swamp", "Meadow", "Riverbed", "Island", "Coral", "Rainforest", "Glacier", "Creek"
+};
+
+const char* const wordsSpace[] PROGMEM = {
+    "Planet", "Galaxy", "Moon", "Comet", "Rocket", "Star", "Mars", "Nebula", "Black Hole", "Asteroid", 
+    "Meteor", "Saturn", "Venus", "Jupiter", "Uranus", "Saturn", "Pluto", "Orbit", "Exoplanet", "Supernova"
+};
 
 const char **const wordLists[] PROGMEM = {
   wordsAnimals, wordsMovies, wordsShows, wordsFood, wordsConner,
