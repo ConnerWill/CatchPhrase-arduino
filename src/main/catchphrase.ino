@@ -54,14 +54,12 @@ void playTone(int frequency, int duration) {
 void playCountdownSound() {
   // Play a short descending tone every second during the countdown
   playTone(1000, 100);
-  delay(100); // Short delay to separate tones
 }
 
 void playRoundEndSound() {
   playTone(500, 500); // Play a 500Hz tone for 500ms when the round ends
   delay(100);         // Short delay to separate tones
   playTone(500, 500); // Play a 500Hz tone for 500ms when the round ends
-  delay(100);         // Short delay to separate tones
 }
 
 void playWinnerSound() {
@@ -69,7 +67,6 @@ void playWinnerSound() {
     playTone(1000, 200); // First tone (1000 Hz)
     delay(300);          // Short delay between tones
     playTone(1500, 200); // Second tone (1500 Hz)
-    delay(300);          // Short delay between tones
   }
 }
 
