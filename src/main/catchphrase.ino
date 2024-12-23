@@ -26,17 +26,27 @@ int timer = roundTime;    // Initialize timer with round time
 // Categories and words (PROGMEM to save memory)
 const char category1[] PROGMEM = "Animals"; // Category name: Animals
 const char category2[] PROGMEM = "Movies";  // Category name: Movies
-const char category3[] PROGMEM = "Food";    // Category name: Food
-const char category4[] PROGMEM = "Conner";  // Category name: Food
-const char *const categories[] PROGMEM = {category1, category2, category3, category4}; // List of all categories
+const char category3[] PROGMEM = "Shows";  // Category name: Movies
+const char category4[] PROGMEM = "Food";    // Category name: Food
+const char category5[] PROGMEM = "Conner";  // Category name: Food
+const char *const categories[] PROGMEM = {category1, category2, category3, category4, category5}; // List of all categories
 
 const char *const wordsAnimals[] PROGMEM = {"Lion", "Elephant", "Tiger", "Bear", "Giraffe"};       // Words in Animals category
 const char *const wordsMovies[] PROGMEM = {"Inception", "Titanic", "Avatar", "Jaws", "Gladiator"}; // Words in Movies category
+const char *const wordsShows[] PROGMEM = {"Seinfeld", "The Office", "Lost", "Game of Thrones", "Friends"}; // Words in Shows category
 const char *const wordsFood[] PROGMEM = {"Pizza", "Burger", "Sushi", "Pasta", "Salad"};            // Words in Food category
 const char *const wordsConner[] PROGMEM = {"Conner", "Lucas", "Sarah", "Ethan", "Will"};           // Words in Conner category
 
-const char **const wordLists[] PROGMEM = {wordsAnimals, wordsMovies, wordsFood, wordsConner}; // List of all word arrays
-const int wordCounts[] = {5, 5, 5, 5}; // Number of words in each category
+const char **const wordLists[] PROGMEM = {wordsAnimals, wordsMovies, wordsShows, wordsFood, wordsConner}; // List of all word arrays
+
+// Calculate number of words in each category
+const int wordCounts[] = {
+  sizeof(wordsAnimals) / sizeof(wordsAnimals[0]),
+  sizeof(wordsMovies)  / sizeof(wordsMovies[0]),
+  sizeof(wordsShows)   / sizeof(wordsShows[0]),
+  sizeof(wordsFood)    / sizeof(wordsFood[0]),
+  sizeof(wordsConner)  / sizeof(wordsConner[0])
+};
 
 // Helper function to get a random word from a category
 void getRandomWord(int categoryIndex, char *buffer) {
